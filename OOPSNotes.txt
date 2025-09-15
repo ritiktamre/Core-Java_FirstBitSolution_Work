@@ -1,0 +1,50 @@
+Que - What is OOPs.
+Ans - Opps it stands for object oriented programming language.object oriented programming language is used to
+ main purpose of real-world problem and real-world entity is called as Object oriented programming language.
+
+#oops are these step follows.
+- state.
+- Behaviour.
+- Identity.
+- Responsibility.
+
+# Oops are the four types.
+1. Abstraction.
+2. Encapsulation.
+3. Inheritance.
+4. Polymorphism.
+
+1. Abstraction = At the end of the abstraction state of an object is known as Abstraction.
+# Why Abstraction= Abstraction is necessary data is used and not necessary data is ignore.//Selective Ignorance.
+
+2. Encapsulation = Encapsulation means binding and hiding togetherly is known as Encapsulation.
+   
+Behaviour means function.
+# Why Encapsulation = State and behaviour is binding.
+b.Data is not directly access.
+c.State and behaviour are inseperable in real life.
+d.behaviour does not exixts the entity.
+
+3.Inheritance = Inheritance as the way of reausing all ready define class is known as Inheritance.Inheritance 
+(is a) relation means extends keyword used.
+
+Why Inheritance = Inheritance is used to reausing the class.
+
+                  Reause
+                    |
+                Reducdancy                          
+                |        |                           
+            Memory      Data Inconsistency          
+             Waste        |                         
+                        System Failure
+
+
+# Upcasting = means Genralization.
+# DownCasting = means Specialization.
+
+4.Polymorphism = Same message has given to genralize things and same behaviour but implement differently is 
+known as Polymorphism.
+
+
+
+ 
