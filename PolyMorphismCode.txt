@@ -1,0 +1,234 @@
+   # PolyMorphism  #
+
+ Polymorohism = Same message has given to genralize things and same behaviour but implement differently is known as polyorphism.
+
+
+  # Polymorphism Code # 
+
+
+package practice;
+
+class Employee 
+{
+	int id;
+	String name;
+	double salary;
+	double CalculateSal;
+	
+	
+	public Employee()
+	{
+		
+	}//default constructor
+
+	public Employee(int id, String name, double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+ 
+	
+	
+    double CalculateSal()
+	{
+		return salary;
+	}
+	
+	
+	public void display()
+	{
+		System.out.println("Id :"+id);
+		System.out.println("Name :"+name);
+		System.out.println("Salary :"+salary);
+	}
+	
+}//class Employee ends here
+
+class SalesManager extends Employee {
+	
+	double incentive;
+	double target;
+	double totalSalary;
+	
+	
+	public SalesManager() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public SalesManager(int id, String name, double salary, double incentive, double target) {
+		super(id, name, salary);
+		this.incentive = incentive;
+		this.target = target;
+	}
+
+	public double getIncentive() {
+		return incentive;
+	}
+
+	public void setIncentive(double incentive) {
+		this.incentive = incentive;
+	}
+
+	public double getTarget() {
+		return target;
+	}
+
+	public void setTarget(double target) {
+		this.target = target;
+	}
+	
+
+	
+      double CalculateSal()
+	{
+		return totalSalary = getSalary() + getIncentive();
+	}
+
+	public void display()
+	{
+		System.out.println("--- SalesManager Details ---");
+		super.display();
+		System.out.println("Incentive :"+incentive);
+		System.out.println("Target :"+target);
+		System.out.println("Total Salary :"+totalSalary);
+		
+	}
+
+	
+}//class SalesManager ends here
+
+class Admin extends Employee {
+	
+	double allowance;
+	double totalSalary;
+	
+	public Admin() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Admin(int id, String name, double salary, double allowance) {
+		super(id, name, salary);
+		this.allowance = allowance;
+	}
+
+	public double getAllowance() {
+		return allowance;
+	}
+
+	public void setAllowance(double allowance) {
+		this.allowance = allowance;
+	}
+
+	public double getTotalSalary() {
+		return totalSalary;
+	}
+
+	public void setTotalSalary(double totalSalary) {
+		this.totalSalary = totalSalary;
+	}
+	
+	public double CalculateSal()
+	{
+		return totalSalary = getSalary() + getAllowance();
+		
+	}
+	
+	public void display()
+	{
+		System.out.println("-- Admin Details --");
+		super.display();
+		System.out.println("Allowance :"+allowance);
+		System.out.println("Total Salary :"+totalSalary);
+	}
+	
+	
+}//class Admin ends here
+
+class HR extends Employee {
+	
+	double commision;
+	double totalSalary;
+	
+	public HR() {
+		
+	}
+
+	public HR(int id, String name, double salary, double commision) {
+		super(id, name, salary);
+		this.commision = commision;
+	}
+
+	public double getCommision() {
+		return commision;
+	}
+
+	public void setCommision(double commision) {
+		this.commision = commision;
+	}
+
+	public double getTotalSalary() {
+		return totalSalary;
+	}
+
+	public void setTotalSalary(double totalSalary) {
+		this.totalSalary = totalSalary;
+	}
+	
+	double CalculateSal()
+	{
+		return totalSalary = getSalary() + getCommision();
+	}
+	
+	public void display()
+	{
+		System.out.println("-- HR Details --");
+		super.display();
+		System.out.println("Commision :"+commision);
+		System.out.println("Total Salary :"+totalSalary);
+	}
+}
+
+public class Demo {
+	
+	public static void main(String[] args) {
+		  
+		Employee  e1 = new SalesManager(1,"Radhe",30000,4000,40);
+	    e1.CalculateSal();
+	    e1.display();
+	    System.out.println();//next line used
+	    
+	    Employee e2 = new Admin(11,"Shyam",20000,2000);
+	    e2.CalculateSal();
+	    e2.display();
+	    System.out.println();//next line used
+	    
+	    Employee e3 = new HR(21,"Kahna",10000,1000);
+	   e3.CalculateSal();
+	    e3.display();
+	}
+}

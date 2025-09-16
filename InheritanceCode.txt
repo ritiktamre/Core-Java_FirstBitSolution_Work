@@ -1,0 +1,243 @@
+ # Inheritance Code # 
+
+Inhertance = Inheritance as the way of reausing already define class.
+Inheritance is a relation (extends).
+
+
+why inheritance = Inheritance is a reause the class.
+                --------
+               | Reause |
+                --------
+                  |
+                  |
+                  |
+              ------------
+             | Reducdancy |
+              ------------
+              /       \
+             /         \
+          --------    ---------------
+         | Memory |  |     Data      |
+         | waste  |  | Inconsistency |
+          --------    ---------------
+                            |
+                            |
+                            |
+                      ----------------
+                     | System Failure |
+                      ----------------
+
+
+UpCasting = UpCasting means Genralization.
+DownCasting = DownCasting means Specialization.
+
+
+# Inheritance Code #
+
+   package practice;
+
+
+class Employee
+{
+	int id;
+	String name;
+	double salary;
+	
+	public Employee()
+	{
+		
+	}//default Constructor
+	
+	public Employee(int id,String name,double salary)
+	{
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		
+	}//Parameter Constructor
+	
+	public void setId(int id)
+	{
+		this.id = id;
+	}
+	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	
+	public void setSalary(double salary)
+	{
+		this.salary = salary;
+	}
+	
+	public int getId()
+	{
+		return id;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public double getSalary()
+	{
+		return salary;
+	}
+	
+	public void display()
+	{
+		System.out.println("Id :"+id);
+		System.out.println("Name :"+name);
+		System.out.println("Salary :"+salary);
+	}
+}//class Employee ends here
+
+class SalesManager extends Employee
+{
+	
+	double incentive;
+	int target;
+	
+	public SalesManager()
+	{
+	
+	}//default Constructor
+
+	public SalesManager(int id, String name, double salary, double incentive, int target)
+	{
+		super(id, name, salary);
+		this.incentive = incentive;
+		this.target = target;
+	}
+
+	public double getIncentive()
+	{
+		return incentive;
+	}
+
+	public void setIncentive(double incentive)
+	{
+		this.incentive = incentive;
+	}
+
+	public int getTarget() 
+	{
+		return target;
+	}
+
+	public void setTarget(int target)
+	{
+		this.target = target;
+	}
+	
+	public void display()
+	{
+		System.out.println("--- SalesManager Details ---");
+		super.display();
+		System.out.println("Incentive :"+incentive);
+		System.out.println("Target :"+target);
+	}
+}//class Salesmanager ends here
+
+class Admin extends Employee 
+{
+	
+	double allowance;
+	
+	public Admin()
+	{
+		
+	}//default Constructor
+
+	public Admin(int id, String name, double salary, double allowance)
+	{
+		super(id, name, salary);
+		this.allowance = allowance;
+	}
+
+	public double getAllowance()
+	{
+		return allowance;
+	}
+
+	public void setAllowance(double allowance)
+	{
+		this.allowance = allowance;
+	}
+	
+	public void display()
+	{
+		System.out.println("-- Admin details --");
+		super.display();
+		System.out.println("Allowance :"+allowance);
+	}
+}//class Admin ends here
+
+class HR extends Employee
+{
+	
+	double commision;
+	
+	public HR() {
+	
+	}//default Constructor
+
+	public HR(int id, String name, double salary, double commision)
+	{
+		super(id, name, salary);
+		this.commision = commision;
+	}
+
+	public double getCommision()
+	{
+		return commision;
+	}
+
+	public void setCommision(double commision) 
+	{
+		this.commision = commision;
+	}
+	
+	public void display()
+	{
+		System.out.println("-- HR Details --");
+		super.display();
+		System.out.println("Commision :"+commision);
+	}
+	
+}
+
+public class Demo {
+	
+	public static void main(String[] args)
+	{
+	   SalesManager s1 = new SalesManager();
+	   s1.id=12;
+	   s1.name="Ram";
+	   s1.salary=40000;
+	   s1.incentive=4000;
+	   s1.target=40;
+	   s1.display();
+	   System.out.println(); // next line used
+	   
+	   
+	   Admin a1 = new Admin();
+	   a1.id = 11;
+	   a1.name = "Radhe";
+	   a1.salary = 30000;
+	   a1.allowance = 3000;
+	   a1.display();
+	   System.out.println(); //next line used
+	   
+	   HR h1 = new HR();
+	   h1.id = 15;
+	   h1.name = "Shyam";
+	   h1.salary = 25000;
+	   h1.commision = 2500;
+	   h1.display();
+	   
+	   
+	}
+}
