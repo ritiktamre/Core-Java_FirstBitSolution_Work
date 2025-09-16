@@ -1,0 +1,92 @@
+ # Setter Getter Method Used #
+
+ # Setter = setter method is used to set the value is called as Setter.
+
+   Example 
+            public void setId(int id)
+             {
+                this.id = id;
+              } // Setter method used
+    
+ # Getter = Getter method is used to assign the value is called as Getter.
+
+   Example 
+            public int getId() 
+           {
+              return id;
+           } // Getter method used
+
+
+
+
+package practice;
+
+class Employee {
+	
+	int id;
+	String name;
+	double salary;
+	
+	public Employee() {
+		this.id=10;
+		this.name="Raju";
+		this.salary=23456;
+	}
+	
+	public Employee(int id,String name,double salary)
+	{
+		this.id=id;
+		this.name=name;
+		this.salary=salary;
+	}
+	
+	public void setId(int id)
+	{
+		this.id = id;
+	}
+	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	
+	public void setSalary(double salary)
+	{
+		this.salary = salary;
+	}
+	
+	public int getId()
+	{
+		return id;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public  double getSalary()
+	{
+		return salary;
+	}
+	public void display()
+	{
+		System.out.println(" --- Employee Details --- ");
+		System.out.println("ID :"+id);
+		System.out.println("Name :"+name);
+		System.out.println("Salary :"+salary);
+	}
+}
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+         Employee e1 = new Employee(); 
+         e1.id = 101;
+         e1.name = "Rahul";
+         e1.salary = 10000;
+         e1.display();
+	}
+
+}

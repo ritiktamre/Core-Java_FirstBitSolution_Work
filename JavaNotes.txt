@@ -1,0 +1,282 @@
+# Java = java is a independent programming language.java is a high level object oriented programming language 
+that is used for building software application across various platform. java it was invented in 1995 by 
+james Goshling.
+
+#keys features in java.
+- Platform Independent.
+- Robust and secure.
+- Multi-threading.
+- Automatic memory management.
+- object oriented.
+
+Java are these types.
+1.JDK, 2. JRE, 3.JVM.
+
+1. JDK = Jdk it stands for java development kit.java development kit is used to java Applications is known as
+  Java Development Kit.
+
+2. JRE = JRE it stands for Java Runtime Environment.Java Runtime Environment is used to run java Application is
+ known as Java Runtime Environment.
+
+3. JVM = JVM it stands for Java Vertual Machine.Java Vertual machine is used to run java program is called as 
+  Java Vertual Machine.
+
+@ Function = functions is connected as behaviour.
+ a.Functions needs are all sensible value.
+ b.function can not need Explicit call.
+ c.function needs implicitly Automatically calls.
+ d.functions needs all sensible value function does not needs default value.
+ e.functions which gets calls each and every objects will checks.
+
+@ Constructor = Constructor is a special function which gets implicitly automatically call at the time of
+ object creation is known as Constructor.constructor which gets calls each and every object will check.
+
+ = Constructor are used to initilize the object implicity automically.
+ = Constructor has same name as the same class.
+ = Constructor does not have returntype void even.
+
+# Constructor are two types.
+1.Parameter Constructor = Parameter Constructor is a constructor which initlize the no of parameter is called as 
+Parameter constructor.
+
+2.Default Constructor = Default Constructor is a Constructor which does not take any parameter is called as
+ Default Constructor. 
+
+# Setter and getter = 
+- Setter = Setter is used to set the value is called as setter.(Mutators).
+- Getters = getters is used to assign the value is called as Getters.(Inspectors,Accesors)
+
+@ Name Mangling = Namemangling means Discriptor.
+ a.java does namemangling thought for function overloading and vice versa.
+ b.Namemangling are used to internally change the function name at compile time.
+
+@ Function Overloading = Function overloading is considered as Signature.it happens function name,must be
+ same and number of parameter must be different.
+ a. No. of Parameter must be different.
+ b. Datatype of the parameter must be different.
+ c.sequence of datatype of the parameter must be different. 
+
+@ SDLC = SDLC it stands for Software development lifecycle. software development lifecycle is used to 
+ test design, devlop is called as Software development lifecycle.
+
+ Key phases of SDLC
+ - Platform Independent.
+ - Implementation.
+ - Deployment.
+ - Optimization.
+
+ SDLC Models are the four types.
+ - V- Models.
+ - Spirial Models.
+ - Waterfall Models.
+ - Anglie Models.
+
+ @ Abstraction Function = Abstraction function is a function which has a decleration does not have a
+ defination is known as Abstraction function.
+ 
+ - Abstract function must be overhideen.
+ - Abstract class must be inherited.
+ - Abstract function are non-Concret function.
+
+ # Why Abstract function = Abstract function is a incomplete class.Abstract function is not create object.
+   Abstract is all works for Sub-class.
+
+ @ Interface = Interface means Pure- abstract function.all the functions of interface are purely abstract
+ function is known as interface.
+ 
+ Interface are four types.
+ - Constraints.
+ - Is Like a (Implements).
+ - Code Security.
+ - multi-type compectible.
+
+why Interface = Interface means purely abstract class.interface is a incomplete class. interface is not
+ create a object, but interface is multi inheritance support and 100 % abstraction.
+
+ @ Static Varible = - Static variable means one for a class. 
+ - Static variable get memory with the class loader by class loaded.
+ - static variable get change the value with the particulaer object of a class.
+ - static function are recommended access to static variable.
+ - static variable get initilize using static block.
+ - static block get ID has execution.
+ - static function are non-overhidden function.
+
+ Why Static variable = static variable means one data is allow all employees.
+
+ @ Static Block = static block is a block of code get runs ones with a class loader by a class loaded 
+ is called a static block.it is used to initilize the static block.
+
+ @ Final Variable = final variable must be used for final attributes,final class,final methods(Functions).
+ - Final Attributes = final Attributes can not be changed.
+ - Final Class = Final Class can not be inherited.
+ - final methods = final methods can not be overhidden.
+
+ # why Final Variable = Final variable means agar humne kisi value ya data ko final variable se initilize 
+ kiya h toh aap usko kabhi bhi change nhi kr skte isliye hum sab final variable ka use krte h.
+
+ @ IDE = IDE it stands for Intregerated Development Environment.Intregerated Development Environment is 
+ exactly used in text Editors,java compilers,and console-user Interface (CUI).
+
+ @ Class Loader = class loader are the three types.
+ 1. Extension = Extension means Library.
+ 2. Built-in = Build-in means Boot Strap.
+ 3. Applications = Applications means our class path.
+
+         
+                        Class Loader
+                       /      |      \        
+                      /       |       \
+                  Extension  Build-in   Application
+                    |         |             |
+                    |         |             |
+                  Library    Boot Strap   Our Class Path
+
+@ Package = Package is used to name-conversion and access-modifier is called as package.
+ - one package is a multiple class.
+ - one package is only one class is public.
+ - one package is not multiple class is public.
+ - jab hum kisi class ko public krte h toh ussi time class ka name and file ka name same hoge 
+    but maindiatory nhi h ki same hoge.
+
+ @ Wraper Class = Each primitive datatypes has it own relevant wraper class. wraper class means aap kisi 
+ class ka name int nhi likh skte aapko Integer likhna hoga is called as Wraper class.
+
+   int - Integer.
+   char - Charecter.
+   double - Double.
+   float - Float.
+
+ 
+ @ DownCasting = Downcasting means converting into a super class reference into a sub-class reference
+ is called as downcasting.
+
+ # Why downcasting = 
+   super-class reference = super class reference is used by super method.
+   sub-class reference = sub class reference is used by sub method.
+
+  super class method ko sub class reference ko use krna h toh downcasting krna hoga. 
+
+  Ex = Employee e1 = new Salesmanager();
+       Employee e2 = new Admin();
+
+      if(e1 instanceof Salesmanager)
+        Salesmanager s1 = (SalesManager).e1;
+
+     if(e2 instanceof Admin)
+      Admin a1 = (Admin).e2;
+
+ # Exception Handling = Exception handling means run-time problem.
+
+                      objects
+                         ^
+                         |
+                         |
+                 ----->Throwable <------ Error
+             |
+             |
+          Exceptions ------------------------
+              |                                |
+SQL Exceptions|                                |
+              |                            Runtime Exception
+ filenotfound |                              |                                 ----------------------
+  Exceptions  |  --------------------        |NullPointerException            | Unchecked Exceptions |
+              | | Checked Exceptions |       |                                 ----------------------
+ I/o Exception|  --------------------        |ArrayIndexOutOfBoundsExceptions
+              |                              |
+ interupted   |                              |NumberFormatException
+ thread       |                              |
+                                             |ArithmeticException
+
+  
+# Checked Exceptions = Checked exceptions will checked as compile time.
+   
+   compile time exceptions =
+     - file not found exceptions.
+     - sql exceptions.
+     - intrupted thread.
+     - I/o Exceptions.
+
+# UnChecked Exceptions = Unchecked Exceptions will checked as Runtime Exceptions.
+   
+   Runtime time Exceptions =   
+   - ArrayIndexOutOfBounds Exceptions.
+   - NullPointer Exceptions.
+   - Arithmetic Exceptions.
+   - NumberFormat Exceptions
+
+ # Exceptions handinding are the five types of block.
+ a. Try Block = try block is used to write the Risky code is called as Try Block.
+
+ b. Catch Block = Catch block is used to handle the error inside the try block is called as Catch block.
+
+ c. Throw Block = throw block is used to one throwable object at a time.throw block is written inside
+    the block . one throwable object at a time.
+
+ d. Throws Block = Throws block is used to decleration at a time. throws block is written inside the signature
+    throws block is multiple decleration at a time.
+
+ e. Finally Block = Finally Block is always Executed is known as Finally Block.
+
+ 
+# Try block and catch Block =  Try block and catch block is used to try block is write to risky code. agr 
+ hum try block ke sath catch block ka use nhi krte h toh program crash and band ho skta h isliye hum 
+ try block ke sath catch block ka use krte h kyuki catch block ka work h try block pr joh bhi error aaye 
+ usko handle kro. hum one try block and multiple catch block ka use bhi kr skte h.
+
+ # Collections Framework = collections framework is an object that stores a group of element like add,
+   remove,insert,acess is known as Collection framework.
+
+  # why Collection framework = collection framework is used to unified Architecture, Build-in DataType,
+    Build-in Algorithm, Generics Algorithm,performance, Good Coading.
+
+                             -------------
+                            | Collections |
+                             ------------- 
+                           /               \    
+                          /                 \      -UnIndexed
+ -Indexed              ------               -----  -UnSorted
+ -ordered             | List |             | Set | -UnDuplicate
+ -Duplicate            ------               -----
+                     /       \             /     \
+                    /         \           /       \
+                   /           \         /         \
+               --------      --------   -------    -------
+              |  Array |    | Linked | |TreeSet|  |HashSet|
+              |  List  |    |  List  |  -------    -------
+               --------      --------  
+
+# collection = collections are the two ways.
+ 1.List = List are two ways.
+    a. ArrayList , b. linkedList (always work same)in the collection.
+   ArrayList and linked list =Arraylist and linked list me hum jiss type me data store krege boh usi type me
+   output return krega.Arraylist and linked me data indexed,ordered ,duplicate data is allowed. Arraylist is faster the  
+     Linked list.
+  
+2. Set = set are two ways.
+   a.TreeSet = Treeset me hum jiss type me data dalte h boh sorted hokr data aata h. treeset is not allow
+      ordered,indexed,duplicate data is not allow is called as Treeset.
+   b.HashSet = Hashset ka data kuch alag hi aata h kyuki hashmet me hashing always calti rehti h isliye uska 
+     output alag hi aata h.
+
+ 
+# MapSet = means Stores the keys and values.
+  MapSet is basically used to treeset and hashset is called as mapset.
+
+ Key points =
+ - Mapset is not allow the duplicate keys,and values.
+ - but agr keys same h and value different h toh value override hogi.
+
+  # FileHandling = Findhandling is used to store the permanent storage is called as FileHandling.
+     filehandling are two ways  1. Read , 2. Write  
+
+   #keys points
+        filehandling me pehle humko write krna hoga write krne kr liye humko.
+        fileOutputstream,objectOutputstream ka use krna hoga.
+
+       Filehandling me jb hum read use krege toh uske liye humko downcasting krna hoga.kyuki hum joh
+        file write me use kr rhe h ussko read me use krna padega.downcasting krne ke bd hamara joh  
+        error aayega boh aayega serializable usko humko serializable banana pdega.
+          fileinputStream,outputInputStream and downcasting krna hoga. 
+   
+
+   

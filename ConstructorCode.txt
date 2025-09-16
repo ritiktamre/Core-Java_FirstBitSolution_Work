@@ -1,0 +1,77 @@
+# Constructor Method used #
+
+# Constructor = constructor is a Special function which gets implicitly automically call at 
+the time of object creation is known as constructor.constructor which gets call each and every
+ will check.
+
+ a. Constructor are used to intilize the objects with implicitly automically calls.
+ b. constructor does not have returntype void even.
+ c. constructor are used to same name as the same class.
+
+ # Constructor are two type.
+ 1.Default Constructor = Default constructor is a Constructor which does not take any parameter 
+  is called as Default Constructor.
+ 
+ Example= 
+       public Employee() {
+       
+       this.id = not null;
+       this.name = 'Empty';
+       this.salary = 0.00;
+}//Default Constructor
+
+
+2.Parameter Constructor = Parameter Constructor is a Constructor which takes no of parameter is
+   called as parameter Constructor.
+
+   Example = 
+  public Employee(int id,String name,double salary) {
+       
+       this.id = id;
+       this.name = name;
+       this.salary = salary;
+}//Parameter Constructor
+
+
+ 
+
+
+package practice;
+
+class Employee {
+	
+	int id;
+	String name;
+	double salary;
+	
+	public Employee() {
+		this.id=10;
+		this.name="Raju";
+		this.salary=23456;
+	}
+	
+	public Employee(int id,String name,double salary)
+	{
+		this.id=id;
+		this.name=name;
+		this.salary=salary;
+	}
+
+	public void display()
+	{
+		System.out.println(" --- Employee Details --- ");
+		System.out.println("ID :"+id);
+		System.out.println("Name :"+name);
+		System.out.println("Salary :"+salary);
+	}
+}
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+         Employee e1 = new Employee();      
+         e1.display();
+	}
+
+}
