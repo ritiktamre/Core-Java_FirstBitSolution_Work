@@ -1,0 +1,220 @@
+# Array and ToString method Code #
+
+
+
+package practice;
+
+class Employee 
+{
+	int id;
+	String name;
+	double salary;
+	double CalculateSal;
+	
+	
+	public Employee()
+	{
+		
+	}//default constructor
+
+	public Employee(int id, String name, double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+ 
+	
+	
+    double CalculateSal()
+	{
+		return salary;
+	}
+	
+	
+	public String toString()
+	{
+		return "ID :" +id + ", Name :"+name + ", Salary :" +salary;
+	}
+	
+}//class Employee ends here
+
+class SalesManager extends Employee {
+	
+	double incentive;
+	double target;
+	double totalSalary;
+	
+	
+	public SalesManager() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public SalesManager(int id, String name, double salary, double incentive, double target) {
+		super(id, name, salary);
+		this.incentive = incentive;
+		this.target = target;
+	}
+
+	public double getIncentive() {
+		return incentive;
+	}
+
+	public void setIncentive(double incentive) {
+		this.incentive = incentive;
+	}
+
+	public double getTarget() {
+		return target;
+	}
+
+	public void setTarget(double target) {
+		this.target = target;
+	}
+	
+
+	
+      double CalculateSal()
+	{
+		return totalSalary = getSalary() + getIncentive();
+	}
+
+    public String toString()
+    {
+    	System.out.println("--- SalesManager Details ---");
+    	return super.toString() + ", Incentive :"+incentive + ", Target :"+target + ", Total Salary :" +totalSalary ;
+    }
+	
+}//class SalesManager ends here
+
+class Admin extends Employee {
+	
+	double allowance;
+	double totalSalary;
+	
+	public Admin() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Admin(int id, String name, double salary, double allowance) {
+		super(id, name, salary);
+		this.allowance = allowance;
+	}
+
+	public double getAllowance() {
+		return allowance;
+	}
+
+	public void setAllowance(double allowance) {
+		this.allowance = allowance;
+	}
+
+	public double getTotalSalary() {
+		return totalSalary;
+	}
+
+	public void setTotalSalary(double totalSalary) {
+		this.totalSalary = totalSalary;
+	}
+	
+	public double CalculateSal()
+	{
+		return totalSalary = getSalary() + getAllowance();
+		
+	}
+	
+	public String toString()
+	{
+		System.out.println("--- Admin Details ---");
+		return super.toString() +", Allowance :" + allowance + ", Total Salary :"+totalSalary ;
+	}
+	
+	
+}//class Admin ends here
+
+class HR extends Employee {
+	
+	double commision;
+	double totalSalary;
+	
+	public HR() {
+		
+	}
+
+	public HR(int id, String name, double salary, double commision) {
+		super(id, name, salary);
+		this.commision = commision;
+	}
+
+	public double getCommision() {
+		return commision;
+	}
+
+	public void setCommision(double commision) {
+		this.commision = commision;
+	}
+
+	public double getTotalSalary() {
+		return totalSalary;
+	}
+
+	public void setTotalSalary(double totalSalary) {
+		this.totalSalary = totalSalary;
+	}
+	
+	double CalculateSal()
+	{
+		return totalSalary = getSalary() + getCommision();
+	}
+	
+	public String toString()
+	{
+		System.out.println("--- HR Details ---");
+		return super.toString() +", Commision :" +commision + ", Total Salary :"+totalSalary;
+	}
+	
+	
+}
+
+public class Demo {
+	
+	public static void main(String[] args) {
+		  
+		Employee [] emp = new Employee [3];
+		emp[0] = new SalesManager(11,"Ritik",30000,3000,30);
+		emp[1] = new Admin(12,"Shweta",20000,2000);
+		emp[2] = new HR(13,"Laddu",10000,1000);
+		
+		for(int i=0; i<emp.length;i++)
+		{
+			emp[i].CalculateSal();
+			System.out.println(emp[i]);
+			System.out.println();//next line used
+			
+		}
+	}
+}

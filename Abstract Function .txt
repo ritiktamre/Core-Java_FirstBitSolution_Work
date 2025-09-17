@@ -1,0 +1,244 @@
+  # Abstrac Function #
+ 
+What is Abstract Function = Abstract Function is a Function which has a decleration does not have a defination is known as Abstract Function.
+
+- Abstract Class must be inherited.
+- Abstract Function must be Overhidden.
+- Abstract Function are non-concretic function.
+
+
+ why Abstract Function - abstract fuction is a incomplete class.abstract function is not to create a object. this all works is the sub-class.
+
+  
+  # Abstract Function Code # 
+
+
+
+
+    package practice;
+
+abstract class Employee 
+{
+	int id;
+	String name;
+	double salary;
+	double CalculateSal;
+	
+	
+	public Employee()
+	{
+		
+	}//default constructor
+
+	public Employee(int id, String name, double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+ 
+	
+	
+  abstract  double CalculateSal();
+	
+	
+	public String toString()
+	{
+		return "ID :" +id + ", Name :"+name + ", Salary :" +salary;
+	}
+	
+}//class Employee ends here
+
+class SalesManager extends Employee {
+	
+	double incentive;
+	double target;
+	double totalSalary;
+	
+	
+	public SalesManager() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public SalesManager(int id, String name, double salary, double incentive, double target) {
+		super(id, name, salary);
+		this.incentive = incentive;
+		this.target = target;
+	}
+
+	public double getIncentive() {
+		return incentive;
+	}
+
+	public void setIncentive(double incentive) {
+		this.incentive = incentive;
+	}
+
+	public double getTarget() {
+		return target;
+	}
+
+	public void setTarget(double target) {
+		this.target = target;
+	}
+	
+
+	
+      double CalculateSal()
+	{
+		return totalSalary = getSalary() + getIncentive();
+	}
+
+    public String toString()
+    {
+    	System.out.println("--- SalesManager Details ---");
+    	return super.toString() + ", Incentive :"+incentive + ", Target :"+target + ", Total Salary :" +totalSalary ;
+    }
+	
+}//class SalesManager ends here
+
+class Admin extends Employee {
+	
+	double allowance;
+	double totalSalary;
+	
+	public Admin() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Admin(int id, String name, double salary, double allowance) {
+		super(id, name, salary);
+		this.allowance = allowance;
+	}
+
+	public double getAllowance() {
+		return allowance;
+	}
+
+	public void setAllowance(double allowance) {
+		this.allowance = allowance;
+	}
+
+	public double getTotalSalary() {
+		return totalSalary;
+	}
+
+	public void setTotalSalary(double totalSalary) {
+		this.totalSalary = totalSalary;
+	}
+	
+	public double CalculateSal()
+	{
+		return totalSalary = getSalary() + getAllowance();
+		
+	}
+	
+	public String toString()
+	{
+		System.out.println("--- Admin Details ---");
+		return super.toString() +", Allowance :" + allowance + ", Total Salary :"+totalSalary ;
+	}
+	
+	
+}//class Admin ends here
+
+class HR extends Employee {
+	
+	double commision;
+	double totalSalary;
+	
+	public HR() {
+		
+	}
+
+	public HR(int id, String name, double salary, double commision) {
+		super(id, name, salary);
+		this.commision = commision;
+	}
+
+	public double getCommision() {
+		return commision;
+	}
+
+	public void setCommision(double commision) {
+		this.commision = commision;
+	}
+
+	public double getTotalSalary() {
+		return totalSalary;
+	}
+
+	public void setTotalSalary(double totalSalary) {
+		this.totalSalary = totalSalary;
+	}
+	
+	double CalculateSal()
+	{
+		return totalSalary = getSalary() + getCommision();
+	}
+	
+	public String toString()
+	{
+		System.out.println("--- HR Details ---");
+		return super.toString() +", Commision :" +commision + ", Total Salary :"+totalSalary;
+	}
+	
+	
+}
+
+public class Demo {
+	
+	public static void main(String[] args) {
+		  
+		SalesManager s1  = new SalesManager();
+		s1.id = 101;
+		s1.name = "Radhe";
+		s1.salary = 30000;
+		s1.incentive = 1500;
+		s1.target = 11;
+		s1.CalculateSal();
+		System.out.println(s1);
+		
+		
+		Admin a1 = new Admin();
+		a1.id = 105;
+		a1.name = "Shyam";
+		a1.salary = 25000;
+		a1.allowance = 2000;
+		a1.CalculateSal();
+		System.out.println(a1);
+		
+		HR h1 = new HR();
+		h1.id = 108;
+		h1.name = "Kahna";
+		h1.salary = 20000;
+		h1.commision = 2000;
+		h1.CalculateSal();
+		System.out.println(h1);
+		
+	}
+} 
