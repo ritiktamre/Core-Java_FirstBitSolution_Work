@@ -1,0 +1,167 @@
+    # Interface Code #
+
+  What is Interface = Interface means pure abstract class.All the functions of interface are purely abstract class.interface is a
+   incomplete class. interface is not a create object.
+
+ Interface are four type
+ - Constraints.
+ - Multi-type Compectible.
+ - Code Security.
+ - Is-like-a (implements)
+
+ why interface =
+ - interface are multiple inheritance support.
+ - interface means 100% Abstraction.
+
+ 
+   # Interface Code #
+
+
+
+   package practice ;
+
+interface Racer
+{	
+	void showRacer();
+}
+
+interface Product 
+{
+	void showProduct();
+}
+
+interface TransportTable
+{
+	void showTransport();
+}
+
+class Animal implements Product {
+	
+	public void showProduct()
+	{
+		System.out.println("All Animals is a Product");
+	}
+}//class Animals ends here
+
+class Bull extends Animal implements Racer,TransportTable 
+{
+	public void showRacer()
+	{
+		System.out.println("Bull is participate in race");
+	}
+	
+	public void showTransport()
+	{
+		System.out.println("Bull Can be used for Transport");
+	}
+	
+	public void info()
+	{
+		System.out.println("Bull is a Animal");
+	}
+}//class Bull ends here
+
+class Bufallo extends Animal {
+	
+	public void info()
+	{
+		System.out.println("Bufallo is a Animal");
+	}
+}//class Bufallo ends here
+
+class Horse extends Animal implements Racer,TransportTable 
+{
+	public void showRacer()
+	{
+		System.out.println("Horse is participate in race");
+	}
+	
+	public void showTransport()
+	{
+		System.out.println("Horse can be used for transport");
+	}
+	
+	public void info()
+	{
+       System.out.println("Horse is a Animal");		
+	}
+}//class Horse ends here
+
+class Vehicle implements Product,TransportTable{
+	
+	public void showProduct()
+	{
+		System.out.println("All Vehicle is a Product");
+	}
+	
+	public void showTransport()
+	{
+		System.out.println("Vehicle can be used for Transport");
+	}
+}
+
+class Car extends Vehicle implements Racer {
+	
+	public void showRacer()
+	{
+		System.out.println("Car is Participate in Race");
+	}
+	
+	public void info()
+	{
+		System.out.println("Car is a Vehicle");
+	}
+}//class Car ends here
+
+
+class Railway extends Vehicle {
+	
+	public void info()
+	{
+		System.out.println("Railway is a Vehicle");
+	}
+}//class Railway ends here
+
+public class Demo 
+{
+	
+	public static void main(String[] args) {
+		
+		Bull b = new Bull();
+		System.out.println("-- Bull Details --");
+		b.showRacer();
+		b.showProduct();
+		b.showTransport();
+		b.info();
+		System.out.println();//next line used 
+		
+		
+		Bufallo b1 = new Bufallo();
+		System.out.println(" -- Bufallo Details -- ");
+		b1.showProduct();
+		b1.info();
+		System.out.println();//next line used
+		
+		Horse h1 = new Horse();
+		System.out.println("-- Horse Details --");
+		h1.showProduct();
+		h1.showRacer();
+		h1.showTransport();
+		h1.info();
+		System.out.println();//next line used
+		
+		Car c1 = new Car();
+		System.out.println("-- Car Details --");
+		c1.showProduct();
+		c1.showRacer();
+		c1.showTransport();
+		c1.info();
+		System.out.println();//next line used
+		
+		Railway r1 = new Railway();
+		System.out.println("-- Railway Details --");
+		r1.showProduct();
+		r1.showTransport();
+		r1.info();
+	}
+}   

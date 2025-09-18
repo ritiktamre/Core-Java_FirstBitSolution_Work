@@ -1,0 +1,201 @@
+   # Collection Framework Code # 
+
+  Collection Framework = Colection is an object that stores the group of element like add,Remove,access and insert is called as Collection Framework.
+                                  
+                                   ------------
+                                  | Collection | 
+                                   ------------
+                                  /            \
+                                 /              \
+                                /                \
+                               /                  \
+                           ------               -----
+                          | List |             | Set |  
+                           ------               -----
+                          /      \              /   \
+                         /        \            /     \
+                      -----       ------    ----     ----
+                     |Array|     |Linked|  |Tree|   |Hash|
+                     |List |     | List |  |Set |   |Set |
+                      -----       ------    ----     ----
+
+
+  Collections are two types
+ 1. List, 2.Set
+
+ # List = list are the two types.
+   linkedlist and arraylist is store the data by ordered,indexed,duplicate data is allow. 
+
+# Set = set are the two ways.
+ a.TreeSet = treeset is store the data by sorted,the data. treeset is not orderd by,indexed by,duplicate data is not allow.
+ b.HashSet = HashSet data is hashing.
+
+# MapSet= mapset means stores keys and value.
+   Treeset and hashset is basically used by mapset.
+  
+  mapset is not duplicate key and value but keys is same and values is differnt to override ho jayega.
+
+    
+# Comparable = Comparable are interface in java.comparable only one data sorting .
+  comparable are compareTo() used.
+
+# Comparator = Comparator are interface in java.Comparator are multiple data sorting.
+  Comparator are compare() used.
+
+package Collection;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+
+
+class Employee {
+	
+	int id;
+	String name;
+	double salary;
+	
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Employee(int id, String name, double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+	}
+	
+	
+}
+
+public class Bappa {
+	public static void main(String[] args) {
+		
+		ArrayList<Employee> emp = new ArrayList<Employee>();
+		  emp.add(new Employee(12,"Radhe",30000));
+		  emp.add(new Employee(1,"Shyam",25000));
+		  emp.add(new Employee(19,"Kahna",35000));
+		  emp.add(new Employee(134,"Bappa",20000));
+		  emp.add(new Employee(11,"Shyam",30000));
+		  
+		  System.out.println("-- Before Sorting -- ");
+		   for(Employee e1 : emp)
+		   {
+			   System.out.println(e1);
+			  
+		   }
+		   System.out.println();//next line used
+		   
+		   System.out.println("-- After Sorting By Id : --");
+              Collections.sort(emp , new IdComparator25());
+		      for(Employee e2 : emp)
+		      System.out.println(e2);
+		     System.out.println();//next line used
+		     
+		     System.out.println("-- After Sorting By Name --");
+		     Collections.sort(emp, new NameComparator25());
+		     for(Employee e3 : emp)
+		    	 System.out.println(e3);
+		         System.out.println();//next line used
+		         
+		         System.out.println("-- After Sorting By Salary --");
+		         Collections.sort(emp,new SalaryComparator25());
+		         for(Employee e4 : emp)
+		        	 System.out.println(e4);
+		             System.out.println();//next line used
+
+
+		   
+	}
+}
+
+   
+   
+
+
+         package Collection;
+
+import java.util.Comparator;
+
+public class IdComparator25 implements Comparator<Employee> {
+
+	@Override
+	public int compare(Employee o1, Employee o2) {
+		// TODO Auto-generated method stub
+		return o1.id-o2.id;
+	}
+
+	
+
+}
+
+
+    package Collection;
+
+import java.util.Comparator;
+
+public class NameComparator25 implements Comparator<Employee>{
+
+	@Override
+	public int compare(Employee o1, Employee o2) {
+		// TODO Auto-generated method stub
+		return o1.name.compareTo(o2.name);
+	}
+
+	
+
+	
+
+}     
+
+
+
+
+   package Collection;
+
+import java.util.Comparator;
+
+public class SalaryComparator25 implements Comparator<Employee> {
+
+	@Override
+	public int compare(Employee o1, Employee o2) {
+		// TODO Auto-generated method stub
+		return Double.compare(o1.salary, o2.salary);
+	}
+
+	
+
+}
+
+

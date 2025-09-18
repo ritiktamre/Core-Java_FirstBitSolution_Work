@@ -1,0 +1,148 @@
+   # Exception Handling Code #
+
+  what is Exception Handling = Exception handling means Runtime Problem.
+
+                                       ---------
+                                      | Objects |
+                                       ---------
+                                          ^
+                                          |
+                                          |
+                                          | 
+                                      -----------                           -------
+                         ----------->| Throwable |<------------------------| Error |
+                         |             -----------                          -------
+                         |
+                         | ( Checked Exception )
+                    -----------                                      -------------------
+                   | Exception |< ----------------------------------| Runtime Exception |
+                    -----------                                      -------------------     ( UnChecked Exception )
+                          ^                                                 ^
+                          |                                                 |
+       SqlException -->   |                                                 | --> ArrayIndexOutOfBoundsException
+                          |                                                 |
+IntruptedthreadException->|                                                 | --> NumberFormatException
+                          |                                                 |
+    I/oException ---->    |                                                 | --> ArithmeticException
+                          |                                                 |
+ FileNotFoundException--->|                                                 | --> NullPointerException
+
+
+
+
+
+
+
+
+  
+  # Exception Handling are tro types of Exception
+   1. Checked Exception.
+   2. UnChecked Exception.
+
+  # Checked Exception = These Exceptions will checked as Compile time.
+    these are compile time Exceptions.
+   - SqlExceptions.
+   - FileNotFounfExceptions.
+   - I/oExceptions.
+   - IntruptedThreadExceptions.
+
+ # UnChecked Exceptions = These Exceptions will checked as RunTime Exceptions.
+   these are run time Exceptions.
+   - ArrayIndexOutOfBoundsExceptions.
+   - NumberFormatExceptions.
+   - ArithmeticExceptions.
+   - NullPointerExceptions.
+
+ Types of Blocks.
+ a.Try Block = Try block is used to write the risky code is known as Try Block.
+ b.Catch Block = Catch Block is used to handle the error inside the try block.
+ c.Throw Block = Throw Block is used one throwable object at a time. throw block is written in java inside block .
+ d.Throws Block = Throws Block is used to decleration at a time. throws block is written in java inside signature.
+   throws block is a multiple decleration at a time.
+ e.Finally Block = finally Block is always executed.
+
+
+    # Exception Handling Code # 
+
+
+   package practice;
+
+class Person {
+	
+	int age;
+	
+	public Person() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Person(int age) {
+		super();
+		this.age = age;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return "Age=" + age ;
+	}
+	
+	
+}//class person ends here
+
+class AgeException extends Exception {
+
+	@Override
+	public String toString()
+	{
+		return "Person is Eligible for Voting";
+	}
+	
+	
+}
+
+public class Demo {
+	
+	public static void main(String[] args) {
+		
+		try {
+			int a = Integer.parseInt(args[0]);
+			
+			if(a > 18)
+			{
+				throw new AgeException();
+			}
+			else
+			{
+				System.out.println("Person is not Eligible for Voting");
+			}
+			
+		}
+		catch(ArrayIndexOutOfBoundsException a)
+		{
+			System.out.println(a);
+		}
+		
+		catch(NumberFormatException n)
+		{
+			System.out.println(n);
+		}
+		
+		catch(AgeException ae)
+		{
+			System.out.println(ae);
+		}
+		
+		catch(Exception e)
+		{
+			System.out.println("Some Thing went wrong");
+		}
+		
+	}
+}

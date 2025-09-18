@@ -1,0 +1,109 @@
+ # Multi- Threading #
+
+ What is Multithreading = multi threading means saves the times.multiple threads running inside a program at a same time that are faster and responsible.
+
+ # Threads = Threads means are independent of Execution.
+ 
+ # Creatint Threads = are two types.
+ 1. Extends threads , 2. Implements Runnable.
+ 
+ # Important threads Methods = 
+ - Start = Starts new Threads.
+ - Run = Code that threads Execution.
+ - Sleep = sleep method is used to program paused.
+
+# Thread Lifecycle 
+      ------------        --------------        ------        -------       ----
+     | Born(Start)|------| Ready to Run |------|CPU/OS|------|Running|-----|Dead|
+      ------------        --------------        ------        -------       ----
+                               |                                /   \
+                               |                               /     \
+                               |--------------------------- Sleep   Waiting (Wait)
+                                                              (Sleeping)
+
+
+# Thread Shynchronization = Thread are multiple accessed data stored.
+ - in use to synchronization keyword to lock resourses.
+
+# Advantages of Multi-Threading =
+ - Better CPU Utilization.
+ - Making Faster.
+ - Multiple tasks at same time.
+
+
+  # Multi Threading Code # 
+
+
+  package multithreading;
+
+class Hr extends Thread {
+	
+	public void run()
+	{
+		String str = "3245678909876543213456";
+		
+		for(int i=0;i<str.length();i++)
+		{
+			System.out.print(" "+str.charAt(i));
+		
+		
+		     try {
+				Thread.sleep(1265);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	   }
+	}
+} 
+
+class Hello implements Runnable {
+
+	@Override
+	public void run() {
+		
+String str = "3245678909876543213456";
+		
+		for(int i=0;i<str.length();i++)
+		{
+			System.out.print(" "+str.charAt(i));
+		
+		
+		     try {
+				Thread.sleep(1200);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+}
+
+public class Shyam {
+
+	public static void main(String[] args) {
+	
+		Hr h1 = new Hr();
+		h1.start();
+		
+		Hello he = new Hello();
+		Thread t1 = new Thread(he);
+		t1.start();
+		
+	String str = "cevxwbhruerhoewnxivreyhb4637nchyvddsl";
+		
+		for(int i=0;i<str.length();i++)
+		{
+			System.out.print(" "+str.charAt(i));
+		
+		
+		     try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    }
+	}
+}
